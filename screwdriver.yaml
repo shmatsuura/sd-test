@@ -1,23 +1,11 @@
----
-# Shared definition block
-# This is where you would define any attributes that all your jobs will
-# inherit. In our example, we state that all our Jobs will use the same Docker
-# container for building in.
 shared:
-  # Docker image to use as the desired build container. This typically takes the
-  # form of "repo_name". Alternatively, you can define the image as
-  # "repo_name:tag_label".
-  #
-  # (Source: https://hub.docker.com/r/library/buildpack-deps/)
   requires: [ ~commit, ~pr ]
   image: ubuntu:latest
-# Job definition block
-# "main" is a default job that all pipelines have
 jobs:
   # Jobs are defined by name.
   # All pipelines have "main" implicitly defined. The definitions in your
   # screwdriver.yaml file will override the implied defaults.
-  main:
+  test:
     steps:
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING

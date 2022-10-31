@@ -7,5 +7,5 @@ jobs:
   # screwdriver.yaml file will override the implied defaults.
   test:
     steps:
-      - export: export GREETING="Hello, world!"
+      - export: export GREETING="Hello, world 2!"
       - hello: echo $GREETING

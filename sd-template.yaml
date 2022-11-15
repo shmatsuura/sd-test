@@ -4,7 +4,7 @@ version: buildpack-deps
 description: Sample template for db auto tune test
 maintainer: nobody
 config:
-  image: 
+  image: stable 
   steps:
     - install: |
        echo "test1"

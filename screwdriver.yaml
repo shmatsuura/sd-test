@@ -7,4 +7,4 @@ jobs:
       - validate: template-validate
   publish:
     requires: [ ~commit ]
-    template: screwdriver/template-publish@stable
+    template: template-publish

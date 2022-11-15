@@ -4,7 +4,3 @@ jobs:
     requires: [ ~pr ]
     steps:
       - install: npm i -g screwdriver-template-main
-      - validate: template-validate
-  publish:
-    requires: [ ~commit ]
-    template: template-publish

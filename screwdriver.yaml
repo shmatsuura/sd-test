@@ -1,6 +1,6 @@
 jobs:
   validate:
     image: buildpack-deps
-    requires: [ ~pr ]
+    requires: [ ~pr, ~commit ]
     steps:
       - install: npm i -g screwdriver-template-main

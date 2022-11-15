@@ -1,8 +1,8 @@
 namespace: db-auto-tune
 name: db-auto-tune-template
-version: 1
+version: 1.0
 description: Sample template for db auto tune test
-maintainer: nobody
+maintainer: nobody@test.com
 config:
   image: stable 
   steps:

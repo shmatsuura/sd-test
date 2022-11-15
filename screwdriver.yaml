@@ -6,5 +6,7 @@ jobs:
       - install: npm i -g screwdriver-template-main
       - validate_default_template: template-validate
       - validate_nodejs_template: |
-          export SD_TEMPLATE_PATH=./templates/nodejs.yaml
+          export SD_TEMPLATE_PATH=./sd-template.yaml
           template-validate
+    - install_prerequisites: npm install -g screwdriver-template-main
+    - publish:  template-publish

@@ -1,6 +1,6 @@
 namespace: db-auto-tune
 name: db-auto-tune-template
-version: 1.0
+version: '1.0'
 description: Sample template for db auto tune test
 maintainer: nobody@test.com
 config:

@@ -1,6 +1,6 @@
 namespace: db-auto-tune
 name: db-auto-tune-template
-version: buildpack-deps
+version: 1
 description: Sample template for db auto tune test
 maintainer: nobody
 config:

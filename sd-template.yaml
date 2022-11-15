@@ -1,0 +1,11 @@
+namespace: db-auto-tune
+name: db-auto-tune-template
+version: buildpack-deps
+description: Sample template for db auto tune test
+maintainer: nobody
+config:
+  image: 
+  steps:
+    - install: |
+       echo "test1"
+       echo "test2"

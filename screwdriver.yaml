@@ -1,11 +1,10 @@
-shared:
-  requires: [ ~commit, ~pr ]
-  image: buildpack-deps 
 jobs:
-  # Jobs are defined by name.
-  # All pipelines have "main" implicitly defined. The definitions in your
-  # screwdriver.yaml file will override the implied defaults.
-  test:
+  validate:
+    image: buildpack-deps
+    requires: [ ~pr ]
     steps:
-      - export: export GREETING="Hello, world 2!"
-      - hello: echo $GREETING
+      - install: npm i -g screwdriver-template-main
+      - validate: template-validate
+  publish:
+    requires: [ ~commit ]
+    template: screwdriver/template-publish@stable

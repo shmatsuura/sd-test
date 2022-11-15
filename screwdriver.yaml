@@ -4,3 +4,7 @@ jobs:
     requires: [ ~pr, ~commit ]
     steps:
       - install: npm i -g screwdriver-template-main
+      - validate_default_template: template-validate
+      - validate_nodejs_template: |
+          export SD_TEMPLATE_PATH=./templates/nodejs.yaml
+          template-validate

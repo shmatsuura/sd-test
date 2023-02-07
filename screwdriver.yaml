@@ -7,3 +7,4 @@ jobs:
    run_test:
     steps:
             - git clone https://shmastuura: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@github.com/shmatsuura/sd-test.git
+            - cd sd-test

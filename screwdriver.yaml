@@ -6,4 +6,4 @@ shared:
 jobs:
    run_test:
     steps:
-     - git clone git@github.com:shmatsuura/sd-test.git 
+     - echo "hello" 

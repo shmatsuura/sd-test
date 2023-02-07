@@ -7,10 +7,10 @@ jobs:
    run_test:
     steps:
             - git config --global credential.helper store
-            - git config -- global user.name "shmatsuura"
+            - git config --global user.name "shmatsuura"
             - git clone https://shmastuura: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@github.com/shmatsuura/sd-test.git
             - git config --global credential.helper store
-            - git config -- global user.name "shmatsuura"
+            - git config --global user.name "shmatsuura"
             - cd sd-test;ls
             - echo "aaa" >>test.csv
             - git add . ; git commit -m "test"

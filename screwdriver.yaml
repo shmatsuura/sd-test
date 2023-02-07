@@ -1,12 +1,9 @@
+shared:
+  annotations:
+    screwdriver.cd/timeout: 2880
+  requires: [ ~commit, ~pr ]
+  image: buildpack-deps
 jobs:
-  validate:
-    image: node:12
-    requires: [ ~pr, ~commit ]
+   run_test:
     steps:
-      - install: npm i -g screwdriver-template-main
-      - validate_default_template: template-validate
-      - validate_nodejs_template: |
-          export SD_TEMPLATE_PATH=./sd-template.yaml
-          template-validate
-      - install_prerequisites: npm install -g screwdriver-template-main
-      - publish:  template-publish
+     - git clone git@github.com:shmatsuura/sd-test.git 

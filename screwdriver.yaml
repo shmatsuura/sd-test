@@ -13,7 +13,8 @@ jobs:
             - git clone https://shmastuura:${ACCESS_TOKEN}@github.com/shmatsuura/sd-test.git
             - git config --global credential.helper store
             - git config --global user.name "shmatsuura"
+            - git remote set-url origin https://shmastuura:${ACCESS_TOKEN}@github.com/shmatsuura/sd-test.git
             - cd sd-test;ls
             - echo "aaa" >>test.csv
             - git add . ; git commit -m "test"
-            - git push -u origin main
+            - git push origin main

@@ -3,15 +3,17 @@ shared:
     screwdriver.cd/timeout: 2880
   requires: [ ~commit, ~pr ]
   image: buildpack-deps
+  environment: 
+     ACCESS_TOKEN="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"
 jobs:
    run_test:
     steps:
             - git config --global credential.helper store
             - git config --global user.name "shmatsuura"
-            - git clone https://shmastuura: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@github.com/shmatsuura/sd-test.git
+            - git clone https://shmastuura:${ACCESS_TOKEN}@github.com/shmatsuura/sd-test.git
             - git config --global credential.helper store
             - git config --global user.name "shmatsuura"
             - cd sd-test;ls
             - echo "aaa" >>test.csv
             - git add . ; git commit -m "test"
-            - git push origin main
+            - git push -u origin main
